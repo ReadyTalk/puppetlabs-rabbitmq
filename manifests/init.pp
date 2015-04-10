@@ -203,7 +203,6 @@ class rabbitmq(
       ensure   => present,
       require  => Class['rabbitmq::install'],
       notify   => Class['rabbitmq::service'],
-      provider => 'rabbitmqplugins'
     }
 
     Class['::rabbitmq::service'] -> Class['::rabbitmq::install::rabbitmqadmin']
@@ -215,7 +214,6 @@ class rabbitmq(
       ensure   => present,
       require  => Class['rabbitmq::install'],
       notify   => Class['rabbitmq::service'],
-      provider => 'rabbitmqplugins'
     }
   }
 
@@ -224,7 +222,6 @@ class rabbitmq(
       ensure   => present,
       require  => Class['rabbitmq::install'],
       notify   => Class['rabbitmq::service'],
-      provider => 'rabbitmqplugins',
     }
   }
 
